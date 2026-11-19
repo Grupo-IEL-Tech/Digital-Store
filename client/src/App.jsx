@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
+import ProductsPage from "./pages/ProductsPage";
+import ProductViewPage from "./pages/ProductViewPage";
 
 function App() {
 
@@ -9,9 +11,8 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="/produtos" element={<h1> Produtos </h1>} />
-          <Route path="/categorias" element={<h1> Produtos </h1>} />
-          <Route path="/pedidos" element={<h1> Produtos </h1>} />
+          <Route path="/produtos" element={<ProductsPage />} />
+          <Route path="/produto/:id" element={<ProductViewPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

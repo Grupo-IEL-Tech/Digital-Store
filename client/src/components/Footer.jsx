@@ -21,8 +21,8 @@ function Information({ title, informations }) {
 
 export default function Footer() {
     return (
-        <footer className="bg-dark-gray flex flex-col gap-[32px] px-[64px] pt-[64px] pb-[32px]">
-            <div className="flex justify-between gap-[256px] text-white">
+        <footer className="w-full bg-dark-gray flex flex-col gap-[32px] px-[24px] md:px-[64px] pt-[64px] pb-[32px]">
+            <div className="flex flex-col md:flex-row justify-between gap-[60px] md:gap-[256px] text-white">
                 <div className="flex flex-col gap-[32px]">
                     <Logo color="white" />
                     <p className="w-[310px] text-[16px]">
@@ -36,7 +36,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex gap-[128px]">
+                <div className="flex gap-[64px] md:gap-[128px]">
                     <Information
                         title="Informação"
                         informations={[
@@ -64,7 +64,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-[24px]">
                     <h2 className="font-medium text-[18px]"> Contato </h2>
                     <ul className="flex flex-col gap-[8px]">
-                        <li> <p className="w-[230px]"> Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161 </p> </li>
+                        <li> <p className="min-w-[230px]"> Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161 </p> </li>
                         <li> <span> (85) 3051-3411 </span> </li>
                     </ul>
                 </div>

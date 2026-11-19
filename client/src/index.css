@@ -20,6 +20,6 @@
   font-family: 'Inter', sans-serif;
 }
 
-button:hover, a:hover {
+button:hover, a:hover, input:hover {
   cursor: pointer;
 }

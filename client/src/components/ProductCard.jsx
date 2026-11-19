@@ -1,9 +1,13 @@
-export default function ProductCard({ image, name, price, priceDiscount }) {
+import { useNavigate } from "react-router"
+
+export default function ProductCard({ id, image, name, price, priceDiscount }) {
+    const navigate = useNavigate();
+
     return (
-        <div className="flex flex-col gap-[24px] m-[12px] w-[292px]">
-            <div className="flex w-[292px] h-[321px] rounded-[8px] overflow-hidden">
-                <img src={image} className="object-cover" />
-            </div>
+        <div className="flex flex-col gap-[24px] w-full max-w-full">
+            <button onClick={() => navigate(`/produto/${id}`)} className="flex max-w-full h-auto object-contain rounded-[8px] overflow-hidden">
+                <img src={image} className="w-full object-cover" />
+            </button>
 
             <div className="text-[24px]">
                 <h3 className="text-dark-gray-2"> {name} </h3>

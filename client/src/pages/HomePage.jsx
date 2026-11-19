@@ -9,7 +9,7 @@ import { Link } from "react-router";
 
 export default function HomePage() {
     return (
-        <main className="bg-[##F9F8FE]">
+        <main className="bg-[#F9F8FE]">
             <Gallery classname="w-full"
                 height="720"
                 images={[
@@ -25,15 +25,15 @@ export default function HomePage() {
             />
 
             <Section title="Coleções em destaque" className="bg-[#F9F8FE]">
-                <div className="flex justify-between">
+                <div className="flex flex-col md:flex-row gap-[12px] justify-between">
                     <CollectionCard bgImage="url('/collection-1.png')" />
                     <CollectionCard bgImage="url('/collection-2.png')" />
                     <CollectionCard bgImage="url('/collection-3.png')" />
                 </div>
             </Section>
 
-            <Section title="Coleções em destaque" titleAlign="center" className="bg-[#F9F8FE]">
-                <div className="flex justify-center gap-[48px]">
+            <Section title="Coleções em destaque" titleAlign="center" className="bg-[#F9F8FE] w-full ">
+                <div className="flex md:justify-center gap-[48px] overflow-x-auto">
                     <CollectionBtn icon={<Shirt className="size-[60px] stroke-light-gray group-hover:stroke-primary" />} title="Camisetas" />
                     <CollectionBtn icon={<Icon iconNode={trousers} className="size-[60px] stroke-light-gray group-hover:stroke-primary" />} title="Calças" />
                     <CollectionBtn icon={<Cap className="size-[60px] stroke-light-gray group-hover:stroke-primary" />} title="Bonés" />
@@ -42,28 +42,33 @@ export default function HomePage() {
                 </div>
             </Section>
 
-            <Section title="Produtos em alta">
+            <Section title="Produtos em alta" className="justify-center">
                 <ProductListing
                     products={[{
+                        id: 1,
                         name: "Tênis Nike Masculino",
                         image: "/produc-image-1.jpeg",
                         price: "257,00",
                         priceDiscount: "180,90"
                     }, {
+                        id: 2,
                         name: "Tênis Casual Branco",
                         image: "/produc-image-2.jpeg",
                         price: "274,00",
                     }, {
+                        id: 3,
                         name: "Tênis Nike Masculino",
                         image: "/produc-image-3.jpeg",
                         price: "291,00",
                         priceDiscount: "202,00"
                     }, {
+                        id: 4,
                         name: "Tênis All-Star",
                         image: "/produc-image-4.jpeg",
                         price: "308,00",
                         priceDiscount: "213,90"
                     }, {
+                        id: 5,
                         name: "Tênis Nike Esportivo",
                         image: "/produc-image-5.jpeg",
                         price: "325,00",
@@ -72,8 +77,8 @@ export default function HomePage() {
             </Section>
 
             <Section>
-                <div className="flex gap-[128px]">
-                    <div className="bg-[linear-gradient(to_bottom,rgba(66,0,255,0.1),white)] rounded-[50%] size-[500px] shrink-0 flex items-center">
+                <div className="flex flex-col md:flex-row gap-[32px] md:gap-[128px]">
+                    <div className="bg-[linear-gradient(to_bottom,rgba(66,0,255,0.1),white)] rounded-[50%] size-[300px] md:size-[500px] shrink-0 flex items-center">
                         <img src="/Laye 1.png"/>
                     </div>
 
